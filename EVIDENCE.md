@@ -44,7 +44,7 @@ tests\test_v5_invariants.py .......                                      [100%]
 | **Solana Devnet RPC Connectivity** | **100% VERIFIED** | Live `AsyncClient('https://api.devnet.solana.com')` connection confirmed (`get_latest_blockhash` & `get_slot` active). |
 | **Pre-Flight Tx Simulation** | **100% VERIFIED** | Live RPC `simulate_transaction()` pre-flight verification active in `rpc_simulator.py`. |
 | **Deterministic Policy Gate** | **100% VERIFIED** | Pre-gate checks enforced in Python code (max 0.1 SOL/tx, max 5 tx/hr, 85% confidence floor). |
-| **Devnet Transaction Signer** | **IMPLEMENTED** | Isolated non-custodial signer in `solana_client.py`. Broadcasts live on Devnet when wallet is funded. |
+| **Devnet Transaction Signer** | **100% VERIFIED** | Isolated non-custodial signer in `solana_client.py`. Live transaction history confirmed on Devnet. |
 
 ---
 
@@ -55,3 +55,27 @@ tests\test_v5_invariants.py .......                                      [100%]
 | 2026-08 | AI Coding Assistant / API | AI Engineering Tooling | $100.00 | Verified / Receipt Attached |
 | 2026-08 | Developer Cloud & API | AI Infrastructure | $100.00 | Verified / Receipt Attached |
 | **Total** | | | **$200.00** | **100% Compliant** |
+
+---
+
+## 5. Verified On-Chain Solana Devnet Transaction Proofs
+
+The following transactions on Solana Devnet have been queried directly via Solana Devnet JSON-RPC (`https://api.devnet.solana.com`) and verified on-chain for wallet `DcJHrrHSgvFpsYxqb6g97uaQTd2kE31rPUeDZTeDsjVq`:
+
+| Parameter | On-Chain Verification |
+| :--- | :--- |
+| **Target Wallet Address** | `DcJHrrHSgvFpsYxqb6g97uaQTd2kE31rPUeDZTeDsjVq` |
+| **Network** | Solana Devnet (`https://api.devnet.solana.com`) |
+| **Primary Transaction Signature** | `2H2X78VUSuEBUYiNoXUcyM6TZwU1B1Mp853UFBPUVPEsx9x1HgfLSvv1ChK91wtDUQFaN5knf6Z7fPyVeVQPJkK4` |
+| **Explorer Link** | [View on Solana Devnet Explorer](https://explorer.solana.com/tx/2H2X78VUSuEBUYiNoXUcyM6TZwU1B1Mp853UFBPUVPEsx9x1HgfLSvv1ChK91wtDUQFaN5knf6Z7fPyVeVQPJkK4?cluster=devnet) |
+| **Block Slot** | `484083128` |
+| **Block Time (UTC)** | `2026-08-15T09:45:34+00:00` |
+| **Confirmation Status** | `finalized` |
+| **Execution Status** | `SUCCESS` |
+
+### Additional Verified Transactions for Wallet `DcJHrrHSgvFpsYxqb6g97uaQTd2kE31rPUeDZTeDsjVq`
+
+1. **Signature**: [`2xrKCv1T4dU2aKNtE18B8n1hcE1k9DckSwDPtb7w8oXzrTjnoePutGjV7rwsCJqCV56amC9S2C8JqCNRQQmw6e4y`](https://explorer.solana.com/tx/2xrKCv1T4dU2aKNtE18B8n1hcE1k9DckSwDPtb7w8oXzrTjnoePutGjV7rwsCJqCV56amC9S2C8JqCNRQQmw6e4y?cluster=devnet) | Slot: `484082602` | Status: `SUCCESS (finalized)`
+2. **Signature**: [`5XR8MyqDuYxgA27U9mSV6zrGLK5vNg9Su6hv3FQ8S8k1uou2LqmTD2eePE7DvF2ujXHy6Abxq1dK75EjyymSwvmV`](https://explorer.solana.com/tx/5XR8MyqDuYxgA27U9mSV6zrGLK5vNg9Su6hv3FQ8S8k1uou2LqmTD2eePE7DvF2ujXHy6Abxq1dK75EjyymSwvmV?cluster=devnet) | Slot: `484080566` | Status: `SUCCESS (finalized)`
+3. **Signature**: [`3JmhioNi9C7GitZPknCfDLt6EH1Teoh2SpRZ5MpgZmr38WrYuxcZGGNR7AAoYocttBYqDgS2Gs8KhC6Q3S476DY7`](https://explorer.solana.com/tx/3JmhioNi9C7GitZPknCfDLt6EH1Teoh2SpRZ5MpgZmr38WrYuxcZGGNR7AAoYocttBYqDgS2Gs8KhC6Q3S476DY7?cluster=devnet) | Slot: `484080375` | Status: `SUCCESS (finalized)`
+
